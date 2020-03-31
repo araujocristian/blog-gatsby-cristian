@@ -1,8 +1,8 @@
 import styled from "styled-components"
 import media from "styled-media-query"
-import { Link } from "gatsby"
+import AniLink from "gatsby-plugin-transition-link/AniLink"
 
-export const PostItemLink = styled(Link)`
+export const PostItemLink = styled(AniLink)`
   color: var(--texts);
   display: flex;
   text-decoration: none;
@@ -42,7 +42,7 @@ export const PostItemTag = styled.div`
   background: ${props =>
     props.background ? props.background : "var(--highlight)"};
   border-radius: 50%;
-  color: var(--postColor);
+  color: var(--white);
   display: flex;
   font-size: 1.3rem;
   font-weight: 700;

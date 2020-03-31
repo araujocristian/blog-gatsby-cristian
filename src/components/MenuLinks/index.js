@@ -9,7 +9,14 @@ const MenuLInks = () => (
     <S.MenuLinksList>
       {links.map((link, ind) => (
         <S.MenuLinksItem key={ind}>
-          <S.MenuLinksLink to={link.url} activeClassName="active">
+          <S.MenuLinksLink
+            cover
+            direction="left"
+            bg="#fff"
+            duration={0.6}
+            to={link.url}
+            activeClassName="active"
+          >
             {link.label}
           </S.MenuLinksLink>
         </S.MenuLinksItem>
