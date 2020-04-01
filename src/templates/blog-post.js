@@ -15,7 +15,7 @@ const BlogPost = ({ data, pageContext }) => {
   return (
     <Layout>
       <SEO
-        title={post.frontmatter.title}
+        title={`${post.frontmatter.title} | Cristian Araujo`}
         description={post.frontmatter.description}
         image={post.frontmatter.image}
       />
