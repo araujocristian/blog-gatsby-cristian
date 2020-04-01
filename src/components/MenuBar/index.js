@@ -7,6 +7,7 @@ import { Lightbulb as Light } from "styled-icons/typicons/Lightbulb"
 import { Grid } from "styled-icons/boxicons-solid/Grid"
 import { ThList as List } from "styled-icons/typicons/ThList"
 import getThemeColor from "../../utils/getThemeColor"
+import scrollToTop from "../../utils/scrollToTop"
 
 import * as S from "./styled"
 
@@ -72,7 +73,7 @@ const MenuBar = () => {
         >
           {isListMode ? <Grid /> : <List />}
         </S.MenuBarItem>
-        <S.MenuBarItem title="Ir para o Topo">
+        <S.MenuBarItem title="Ir para o topo" onClick={scrollToTop}>
           <Arrow />
         </S.MenuBarItem>
       </S.MenuBarGroup>
