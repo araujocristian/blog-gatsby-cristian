@@ -8,6 +8,7 @@ module.exports = {
     position: `Desenvolvedor Front End`,
     description: `Sempre falando com bom humor sobre tecnologia, viagens e todo o resto.`,
     author: `@araujocristian`,
+    siteUrl: "https://araujocristian.netlify.com/",
   },
   plugins: [
     `gatsby-plugin-transition-link`,
