@@ -7,7 +7,7 @@ import Search from "../components/Search"
 const SearchPage = props => {
   return (
     <Layout>
-      <SEO title="Search" />
+      <SEO title="Search | Cristian Araujo" />
       <Search />
     </Layout>
   )
