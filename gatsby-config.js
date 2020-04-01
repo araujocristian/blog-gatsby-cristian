@@ -27,7 +27,7 @@ module.exports = {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `images`,
-        path: `${__dirname}/src/images`,
+        path: `${__dirname}/static/assets/img`,
       },
     },
     {
@@ -75,12 +75,13 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `gatsby-starter-default`,
-        short_name: `starter`,
+        name: `Cristian Araujo`,
+        short_name: `Cristian Araujo`,
         start_url: `/`,
-        background_color: `#663399`,
-        theme_color: `#663399`,
+        background_color: `#fff`,
+        theme_color: `#fff`,
         display: `minimal-ui`,
+        icon: "static/assets/img/fav-icon.png",
       },
     },
     // this (optional) plugin enables Progressive Web App + Offline functionality
