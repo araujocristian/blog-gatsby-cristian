@@ -1,9 +1,9 @@
 {
-  "name": "gatsby-starter-default",
+  "name": "cristian-araujo-blog",
   "private": true,
-  "description": "A simple starter to get up and developing quickly with Gatsby",
-  "version": "0.1.0",
-  "author": "Kyle Mathews <mathews.kyle@gmail.com>",
+  "description": "Um blog de tecnologia e outras coisas.",
+  "version": "1.0.0",
+  "author": "Cristian Araujo <araujocristian@live.com>",
   "dependencies": {
     "algoliasearch": "^4.1.0",
     "dotenv": "^8.2.0",
@@ -55,9 +55,9 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/gatsbyjs/gatsby-starter-default"
+    "url": "https://github.com/araujocristian/blog-gatsby-cristian"
   },
   "bugs": {
-    "url": "https://github.com/gatsbyjs/gatsby/issues"
+    "url": "https://github.com/araujocristian/blog-gatsby-cristian/issues"
   }
 }
