@@ -3,19 +3,18 @@ title: Códigos de status de respostas HTTP
 description: >-
   Você conhece os códigos de status de resposta do protocolo HTTP? Hoje vamos
   desmistificar cada um deles.
-date: "2020-04-01 08:58:30"
-category: dev
-background: "#637a91"
+date: '2020-04-01 08:58:30'
 thumbnail: assets/img/códigos-de-status-de-respostas-http.png
+category: dev
+background: '#637a91'
 ---
-
 Talvez não seja de vital importância ser o Google dos códigos de status de resposta do protocolo HTTP, mas é muito importante conhecer os principais e as diferenças sutis entre eles.
 
 É muito importante ser coerente no uso dos códigos para que o cliente não se enrole na mensageiria e consiga gerenciar erros de uma forma fácil e padronizada.
 
 Nesse artigo vamos tratar apenas de alguns dos muitos códigos das 5 classes, esses são os mais utilizados nos sistemas atuais. É recomendado sempre que você use o mais adequado para situação. Nada de colar 400 e 500 em tudo, ok?
 
-# 1xx: Informacional
+### 1xx: Informacional
 
 > Vai ser muito raro encontrar um código desse. Eles são usados para informação.
 
@@ -27,7 +26,7 @@ Nesse artigo vamos tratar apenas de alguns dos muitos códigos das 5 classes, es
 
 **103 Early Hints:** Este código tem principalmente o objetivo de ser utilizado com o cabeçalho Link, indicando que o agente deve pré-carregar recursos enquanto o servidor prepara uma resposta.
 
-# 2xx: Sucesso
+### 2xx: Sucesso
 
 > Esse é o que sempre esperamos receber! Significa que deu tudo certo com sua solicitação.
 
@@ -37,33 +36,33 @@ Nesse artigo vamos tratar apenas de alguns dos muitos códigos das 5 classes, es
 
 **204 No Content:** Não há conteúdo para enviar para esta solicitação, mas os cabeçalhos podem ser úteis. O user-agent pode atualizar seus cabeçalhos em cache para este recurso com os novos.
 
-**206 Partial Content:** Esta resposta é usada por causa do cabeçalho de intervalo enviado pelo cliente para separar o download em vários fluxos.
+**206 Partial Content:** Esta resposta é usada por causa do cabeçalho de intervalo enviado pelo cliente para separar o download em vários fluxos. 
 
-# 3xx: Redirecionamento
+### 3xx: Redirecionamento
 
-> Aqui o cliente vai precisar fazer ações extras para completar o pedido e redirecionar a requisição.
+> Aqui o cliente vai precisar fazer ações extras para completar o pedido e redirecionar a requisição. 
 
 **301 Moved Permanently:** Esse código de resposta significa que a URI do recurso requerido mudou. Provavelmente, a nova URI será especificada na resposta.
 
 **302 Found:** Esse código de resposta significa que a URI do recurso requerido foi mudada temporariamente. Novas mudanças na URI poderão ser feitas no futuro. Portanto, a mesma URI deve ser usada pelo cliente em requisições futuras.
 
-**304 Not Modified:** Essa resposta é usada para questões da cache. Diz ao cliente que a resposta não foi modificada. Portanto, o cliente pode usar a mesma versão em cache de resposta.
+**304 Not Modified:** Essa resposta é usada para questões da cache. Diz ao cliente que a resposta não foi modificada. Portanto, o cliente pode usar a mesma versão em cache de resposta. 
 
-# 4xx: Erro do Cliente
+### 4xx: Erro do Cliente
 
 > Essa classe é provavelmente BIOS rsrs. Os códigos devem ser apresentados quando o cliente parecer ter cometido um erro.
 
 **400 Bad Request:** Essa resposta significa que o servidor não entendeu a requisição pois está com uma sintaxe inválida.
 
-**401 Unauthorized:** Embora o padrão HTTP especifique _"unauthorized"_, semanticamente, essa resposta significa _"unauthenticated"_. Ou seja, o cliente deve se autenticar para obter a resposta solicitada.
+**401 Unauthorized:** Embora o padrão HTTP especifique *"unauthorized"*, semanticamente, essa resposta significa *"unauthenticated"*. Ou seja, o cliente deve se autenticar para obter a resposta solicitada.
 
 **403 Forbidden:** O cliente não tem direitos de acesso ao conteúdo portanto o servidor esta rejeitando dar a resposta. Diferente do código 401, aqui a identidade do cliente é conhecida.
 
-**404 Not Found:** O recurso requisitado não foi encontrado, mas pode ser disponibilizado novamente no futuro.
+**404 Not Found:** O recurso requisitado não foi encontrado, mas pode ser disponibilizado novamente no futuro. 
 
-**406 Not Acceptable:** O recurso solicitado é apenas capaz de gerar conteúdo não aceitáveis de acordo com os cabeçalhos Accept enviados na solicitação.
+**406 Not Acceptable:** O recurso solicitado é apenas capaz de gerar conteúdo não aceitáveis de acordo com os cabeçalhos Accept enviados na solicitação. 
 
-# 5xx: Erro do Cliente
+### 5xx: Erro do Cliente
 
 > Aqui deu BO, bateu fofo. Essa classe informa que o erro aconteceu do lado do servidor.
 
@@ -73,8 +72,8 @@ Nesse artigo vamos tratar apenas de alguns dos muitos códigos das 5 classes, es
 
 **502 Bad Gateway:** Esta resposta de erro significa que o servidor, ao trabalhar como um gateway a fim de obter uma resposta necessária para manipular a requisição, obteve uma resposta inválida.
 
-**503 Service Unavailable:** O servidor não está pronto para manipular a requisição. Causas comuns são um servidor em manutenção ou sobrecarregado.
+**503 Service Unavailable:** O servidor não está pronto para manipular a requisição. Causas comuns são um servidor em manutenção ou sobrecarregado. 
 
-# A Saideira
+### A saideira
 
-Essa publicação foi inspirada numa publicação do pessoal da [Codar.me](https://codar.me/). Gosto muito do conteúdo deles, podem acompanhar!
+Essa publicação foi inspirada numa publicação do pessoal da [Codar.me](https://codar.me/). Gosto muito do conteúdo deles, podem acompanhar! 
