@@ -24,4 +24,25 @@ collections:
           format: "YYYY-MM-DD hh:mm:ss",
         }
       - { label: "image", name: "thumbnail", widget: "image" }
+      - {
+          label: "Category",
+          name: "category",
+          widget: "select",
+          options: ["css", "js", "html", "skills", "dev", "tour", "react"],
+        }
+      - {
+          label: "Background",
+          name: "background",
+          widget: "select",
+          options:
+            [
+              { label: "CSS", value: "#B31917" },
+              { label: "JS", value: "#D6BA32" },
+              { label: "HTML", value: "#EB7728" },
+              { label: "Skills", value: "#7D669E" },
+              { label: "Dev", value: "#637a91" },
+              { label: "Tour", value: "#7AAB13" },
+              { label: "React", value: "#2DA0C3" },
+            ],
+        }
       - { label: "Body", name: "body", widget: "markdown" }
