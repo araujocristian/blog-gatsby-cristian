@@ -16,25 +16,25 @@ Nesse artigo vamos tratar apenas de alguns dos muitos códigos das 5 classes, es
 
 > Vai ser muito raro encontrar um código desse. Eles são usados para informação.
 
-**100 Continue:**
+**100 Continue: **Uma resposta provisória para indicar que tudo ocorreu bem até então e que o cliente pode continuar com a requisição.
 
-**101 Switching Protocol:**
+**101 Switching Protocol: **Esse código é enviado em resposta a um cabeçalho de solicitação Upgrade pelo cliente, e indica o protocolo a que o servidor está alternando.
 
-**102 Processing (WebDAV):**
+**102 Processing (WebDAV): **Este código indica que o servidor recebeu e está processando a requisição, mas nenhuma resposta está disponível ainda.
 
-**103 Early Hints:** 
+**103 Early Hints: **Este código tem principalmente o objetivo de ser utilizado com o cabeçalho Link, indicando que o agente deve pré-carregar recursos enquanto o servidor prepara uma resposta.
 
 ### 2xx: Sucesso
 
 > Esse é o que sempre esperamos receber! Significa que deu tudo certo com sua solicitação.
 
-**200 OK:**
+**200 OK: **Requisição foi bem sucedida. O significado do sucesso varia de acordo com o método HTTP.
 
-**201 Created:**
+**201 Created: **A requisição foi bem sucedida e um novo recurso foi criado como resultado. Esta é uma típica resposta enviada após uma requisição POST.
 
-**204 No Content:**
+**204 No Content: **
 
-**206 Partial Content:** 
+**206 Partial Content: ** 
 
 ### 3xx: Redirecionamento
 
