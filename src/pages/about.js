@@ -84,7 +84,7 @@ const AboutPage = () => (
         redes sociais.
       </p>
 
-      <SocialLinks hideStyle />
+      <SocialLinks aboutPage hideStyle />
     </MainContent>
   </Layout>
 )

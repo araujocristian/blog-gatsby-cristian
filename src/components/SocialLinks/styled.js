@@ -6,7 +6,11 @@ export const SocialLinksWrapper = styled.nav`
   width: 100%;
 
   ${media.lessThan("large")`
-    display: none;
+    display: ${props => (props.aboutPage ? "block" : "none")}
+    
+    ul {
+      padding: 0 1rem;
+    }
   `}
 `
 

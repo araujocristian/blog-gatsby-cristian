@@ -6,6 +6,7 @@ import { UpArrowAlt as Arrow } from "styled-icons/boxicons-regular/UpArrowAlt"
 import { Lightbulb as Light } from "styled-icons/typicons/Lightbulb"
 import { Grid } from "styled-icons/boxicons-solid/Grid"
 import { ThList as List } from "styled-icons/typicons/ThList"
+import { UserAlt as Person } from "styled-icons/fa-solid/UserAlt"
 import getThemeColor from "../../utils/getThemeColor"
 import scrollToTop from "../../utils/scrollToTop"
 
@@ -39,6 +40,18 @@ const MenuBar = () => {
         >
           <S.MenuBarItem>
             <Home />
+          </S.MenuBarItem>
+        </S.MenuBarLink>
+        <S.MenuBarLink
+          cover
+          direction="right"
+          bg={getThemeColor()}
+          duration={0.6}
+          to="/about"
+          title="Sobre mim"
+        >
+          <S.MenuBarItem>
+            <Person />
           </S.MenuBarItem>
         </S.MenuBarLink>
         <S.MenuBarLink
