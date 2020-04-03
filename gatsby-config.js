@@ -84,6 +84,18 @@ module.exports = {
         icon: "static/assets/img/fav-icon.png",
       },
     },
+    {
+      resolve: "gatsby-source-graphql",
+      options: {
+        typeName: "GitHub",
+        fieldName: "github",
+        url: "https://api.github.com/graphql",
+        headers: {
+          Authorization: `bearer ${process.env.GITHUB_TOKEN}`,
+        },
+        fetchOptions: {},
+      },
+    },
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
     `gatsby-plugin-offline`,

@@ -19,6 +19,8 @@ export const SocialLinksList = styled.ul`
   display: flex;
   justify-content: space-around;
   list-style: none !important;
+
+  padding-left: ${props => props.aboutPage && "1rem !important"};
 `
 
 export const SocialLinksItem = styled.li``

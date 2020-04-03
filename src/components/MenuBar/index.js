@@ -7,6 +7,7 @@ import { Lightbulb as Light } from "styled-icons/typicons/Lightbulb"
 import { Grid } from "styled-icons/boxicons-solid/Grid"
 import { ThList as List } from "styled-icons/typicons/ThList"
 import { UserAlt as Person } from "styled-icons/fa-solid/UserAlt"
+import { Code } from "styled-icons/fa-solid/Code"
 import getThemeColor from "../../utils/getThemeColor"
 import scrollToTop from "../../utils/scrollToTop"
 
@@ -64,6 +65,18 @@ const MenuBar = () => {
         >
           <S.MenuBarItem>
             <Search />
+          </S.MenuBarItem>
+        </S.MenuBarLink>
+        <S.MenuBarLink
+          cover
+          direction="right"
+          bg={getThemeColor()}
+          duration={0.6}
+          to="/projects"
+          title="Projetos"
+        >
+          <S.MenuBarItem>
+            <Code />
           </S.MenuBarItem>
         </S.MenuBarLink>
       </S.MenuBarGroup>
