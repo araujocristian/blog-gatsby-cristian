@@ -90,7 +90,7 @@ export const MainContent = styled.section`
   h3,
   h4,
   h5 {
-    margin: 2.4rem auto 1rem;
+    margin: ${props => (props.aboutPage ? "0 auto 1rem" : "2.4rem auto 1rem")};
   }
 
   ul,

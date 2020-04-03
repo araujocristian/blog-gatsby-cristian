@@ -15,7 +15,7 @@ Talvez não seja de vital importância ser o Google dos códigos de status de re
 
 Nesse artigo vamos tratar apenas de alguns dos muitos códigos das 5 classes, esses são os mais utilizados nos sistemas atuais. É recomendado sempre que você use o mais adequado para situação. Nada de colar 400 e 500 em tudo, ok?
 
-### 1xx: Informacional
+# 1xx: Informacional
 
 > Vai ser muito raro encontrar um código desse. Eles são usados para informação.
 
@@ -27,7 +27,7 @@ Nesse artigo vamos tratar apenas de alguns dos muitos códigos das 5 classes, es
 
 **103 Early Hints:** Este código tem principalmente o objetivo de ser utilizado com o cabeçalho Link, indicando que o agente deve pré-carregar recursos enquanto o servidor prepara uma resposta.
 
-### 2xx: Sucesso
+# 2xx: Sucesso
 
 > Esse é o que sempre esperamos receber! Significa que deu tudo certo com sua solicitação.
 
@@ -39,7 +39,7 @@ Nesse artigo vamos tratar apenas de alguns dos muitos códigos das 5 classes, es
 
 **206 Partial Content:** Esta resposta é usada por causa do cabeçalho de intervalo enviado pelo cliente para separar o download em vários fluxos.
 
-### 3xx: Redirecionamento
+# 3xx: Redirecionamento
 
 > Aqui o cliente vai precisar fazer ações extras para completar o pedido e redirecionar a requisição.
 
@@ -49,7 +49,7 @@ Nesse artigo vamos tratar apenas de alguns dos muitos códigos das 5 classes, es
 
 **304 Not Modified:** Essa resposta é usada para questões da cache. Diz ao cliente que a resposta não foi modificada. Portanto, o cliente pode usar a mesma versão em cache de resposta.
 
-### 4xx: Erro do Cliente
+# 4xx: Erro do Cliente
 
 > Essa classe é provavelmente BIOS rsrs. Os códigos devem ser apresentados quando o cliente parecer ter cometido um erro.
 
@@ -63,7 +63,7 @@ Nesse artigo vamos tratar apenas de alguns dos muitos códigos das 5 classes, es
 
 **406 Not Acceptable:** O recurso solicitado é apenas capaz de gerar conteúdo não aceitáveis de acordo com os cabeçalhos Accept enviados na solicitação.
 
-### 5xx: Erro do Cliente
+# 5xx: Erro do Cliente
 
 > Aqui deu BO, bateu fofo. Essa classe informa que o erro aconteceu do lado do servidor.
 
@@ -75,6 +75,6 @@ Nesse artigo vamos tratar apenas de alguns dos muitos códigos das 5 classes, es
 
 **503 Service Unavailable:** O servidor não está pronto para manipular a requisição. Causas comuns são um servidor em manutenção ou sobrecarregado.
 
-### A saideira
+# A saideira
 
 Essa publicação foi inspirada numa publicação do pessoal da [Codar.me](https://codar.me/). Gosto muito do conteúdo deles, podem acompanhar!

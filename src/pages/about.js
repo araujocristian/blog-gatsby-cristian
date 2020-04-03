@@ -12,7 +12,7 @@ const AboutPage = () => (
       title="Sobre mim | Cristian Araujo"
       description="Saiba um pouco mais sobre o desenvolvedor por trás deste blog."
     />
-    <MainContent>
+    <MainContent aboutPage>
       <h1>Sobre mim</h1>
       <p>
         Olá! Meu nome é Cristian Araujo de Jesus, nasci em Santo Amaro/BA, morei
