@@ -91,7 +91,7 @@ Podemos então criar uma função `handleChange` que receba como parâmetro um e
 
 Depois de criado precisamos colocar a função `handleChange` no `onChange` de cada componente.
 
->Não esquecer de dar um `bind` na função para trabalharmos com o contexto correto.
+> Não esquecer de dar um `bind` na função para trabalharmos com o escopo correto.
 
 ```jsx
 import React, { Component } from "react";
@@ -172,11 +172,10 @@ class MyForm extends Component {
 }
 
 export default MyForm;
-
 ```
 
 # A Saideira
 
 Para mais dicas como essa, não deixa de acompanhar o nosso blog e me seguir nas redes sociais! 
 
-**Até a próxima!** 
+**Até a próxima!**
