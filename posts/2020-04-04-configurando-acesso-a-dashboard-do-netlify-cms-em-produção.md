@@ -35,7 +35,7 @@ Quando você tentar logar via Github na sua rota `/admin` só será possível se
 
 Acesse esse link: <https://github.com/settings/applications/new> para cadastrar sua aplicação. Siga o exemplo da imagem abaixo.
 
-![Tela do GitHub de registro de novo OAuth application](assets/img/captura-de-tela-de-2020-04-03-22-43-10.png)
+![Tela do GitHub de registro de novo OAuth application](assets/img/captura-de-tela-de-2020-04-03-22-43-10.png "Tela do GitHub de registro de novo OAuth application")
 
 Após registrar sua aplicação, suas credenciais estão prontas para serem inseridas nas configurações do Netlify.
 
@@ -54,3 +54,5 @@ Lembrando dos ajustes realizados no arquivo `config.yml`, NÃO esquecer de envia
 Agora basta acessar o seu site/admin e se autenticar com o github.
 
 # A Saideira
+
+Essa publicação foi inspirada numa publicação do blog do [Marcio Franca Lima](https://marciofrancalima.com.br). Gosto muito do conteúdo dele, podem acompanhar!
