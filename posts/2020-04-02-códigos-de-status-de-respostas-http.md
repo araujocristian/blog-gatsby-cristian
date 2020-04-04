@@ -74,6 +74,6 @@ Nesse artigo vamos tratar apenas de alguns dos muitos códigos das 5 classes, es
 
 **503 Service Unavailable:** O servidor não está pronto para manipular a requisição. Causas comuns são um servidor em manutenção ou sobrecarregado. 
 
-### A saideira
+### A Saideira
 
-Essa publicação foi inspirada numa publicação do pessoal da [Codar.me](https://codar.me/). Gosto muito do conteúdo deles, podem acompanhar! 
+Essa publicação foi inspirada numa publicação do pessoal da [Codar.me](https://codar.me/). Gosto muito do conteúdo deles, podem acompanhar!
