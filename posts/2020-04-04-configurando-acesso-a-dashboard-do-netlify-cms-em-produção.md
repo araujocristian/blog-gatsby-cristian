@@ -29,7 +29,7 @@ collections:
 
 Atente-se para os campos `repo` e `site_domain`. Perceba que não há **http** ou **https**. Não inclua-os!
 
-## Configurando uma nova aplicação no Github
+# Configurando uma nova aplicação no Github
 
 Quando você tentar logar via Github na sua rota `/admin` só será possível se as credenciais Netlify estiverem cadastradas. Vamos aos detalhes:
 
@@ -53,4 +53,4 @@ Lembrando dos ajustes realizados no arquivo `config.yml`, NÃO esquecer de envia
 
 Agora basta acessar o seu site/admin e se autenticar com o github.
 
-Abraço e até as próximas dicas ;)
+# A Saideira
