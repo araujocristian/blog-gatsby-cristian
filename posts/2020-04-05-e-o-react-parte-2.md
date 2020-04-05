@@ -28,6 +28,72 @@ Poderíamos chamá-lo de TextCounter. Para utilizá-lo, bastaria escrever o simp
 
 Bem simples não? Dentro dele já está todo o seu comportamento, então a partir do momento em que um componente está pronto, não precisamos mais nos preocupar em como ele funciona. Apenas o chamamos.
 
+# Criando componentes com funções
+
+Crie uma função com o nome do componente e retorne os elementos.
+
+```jsx
+function FunctionComponent(){
+   return <h1>Ola Web Developers!</h1>;
+}
+```
+
+# Criando componentes com classes
+
+Crie uma classe estendendo a classe Component fornecida pelo React. Retorne os elementos no método "render()".
+
+```jsx
+class ClassComponent extends React.Component {
+  render() {
+    return <h1>Ola web developers!</h1>;
+  }
+}
+```
+
+# Utilizando componentes
+
+Chame o componente pelo nome como se fosse uma tag. Todas as tags devem ser fechadas.
+
+```jsx
+<ClassComponent></ClassComponent>
+```
+
+ou
+
+```jsx
+<ClassComponent />
+```
+
+### Acessando componentes de Objetos
+
+Podemos ter componentes dentro de objetos:
+
+```jsx
+const MeusComponentes = {
+   FunctionComponent: function(){
+      return <h1>Ola web developers!</h1>
+   }
+}
+
+```
+
+Para acessar:
+
+```
+<MeusComponentes.FunctionComponent />
+```
+
+Ou:
+
+```
+const nome = "FunctionComponent";
+const ComponenteEscolhido = MeusComponentes[nome];
+
+<ComponenteEscolhido />
+```
+
+
+
 # A Saideira
 
 Essa série continua!
