@@ -36,3 +36,9 @@ handleCounterIncrement = () => {
 A função de callback será executado após a conclusão de `setState()`, fornecendo um comportamento síncrono para o seu `console.log()`.
 
 ![](https://miro.medium.com/max/718/1*8n1lNRbNSyX0_oOhrWZXxA.jpeg)
+
+# A Saideira
+
+Esse artigo foi inspirado num artigo do [Jeremy Aw](https://medium.com/@jeremyinelysium), recomendo muito da uma olhada nas postagens dele! 
+
+**Até a próxima!**
