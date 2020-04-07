@@ -74,25 +74,60 @@ const MeusComponentes = {
       return <h1>Ola web developers!</h1>
    }
 }
-
 ```
 
 Para acessar:
 
-```
+```jsx
 <MeusComponentes.FunctionComponent />
 ```
 
 Ou:
 
-```
+```jsx
 const nome = "FunctionComponent";
 const ComponenteEscolhido = MeusComponentes[nome];
 
 <ComponenteEscolhido />
 ```
 
+# Propriedades
 
+Dados que passamos aos componentes pela tag (`<Component nome="Akira" />`).
+
+Eles não podem ser alterados. São acessados pela propriedade "props".
+
+# Propriedades e o Operador Spread
+
+Você pode passar várias propriedades de uma só vez passando um objeto com o operador spread.
+
+```jsx
+<User {...dados}  />
+```
+
+# Estados
+
+Dados internos de cada componente que podem ter seu valor alterado. São acessados pela propriedade "state".
+
+# Alterando Estados
+
+Utilize o método "`setState()`" para alterar os estados de um componente. Este método reexecuta o "`render()`" para atualizar a view, então não execute "`setState()`" dentro de "`render()`" para não causar um looping infinito.
+
+```jsx
+this.setState({
+    time: 5
+})
+```
+
+Ou
+
+```jsx
+this.setState(function(state, props){
+    return {
+        time: state.time + 1
+    }
+}
+```
 
 # A Saideira
 
