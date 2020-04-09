@@ -300,7 +300,7 @@ Crie um contexto com "React.createContext()". Você pode passar como parâmetro 
 const MyContext = React.createContext();
 ```
 
-A raiz da árvore de componentes que utilizarão esse contexto devem estar dentro de <MyContext.Provider>, o qual recebe uma propriedade "value" com os valores que serão passados aos componentes.
+A raiz da árvore de componentes que utilizarão esse contexto devem estar dentro de `<MyContext.Provider>`, o qual recebe uma propriedade "value" com os valores que serão passados aos componentes.
 
 Os componentes que utilizarão o contexto devem receber este contexto em sua propriedade estática "contextType". Assim, em uma árvore com vários contextos, seu componente saberá de qual contexto pegar os dados.
 
@@ -320,7 +320,7 @@ Você pode instalar a extensão para Chrome ou Firefox:
 
 Você também pode usar a React DevTools diretamente do Node.js. Para instalar, basta executar o comando "$ npm install -g react-devtools"
 
-Execute no terminal o comando "$ react-devtools" e insira no <head> da sua aplicação a seguinte tag:
+Execute no terminal o comando "$ react-devtools" e insira no `<head>` da sua aplicação a seguinte tag:
 
 ```jsx
 <script src="http://localhost:8097"></script>
