@@ -129,6 +129,95 @@ this.setState(function(state, props){
 }
 ```
 
+### Lista de Elementos
+
+A maneira mais comum de se criar uma lista de elementos é usando o ".map()".
+
+```jsx
+<ul>
+    {minhaLista.map( pessoa => 
+        <li>
+          {pessoa .nome} - {pessoa .idade} anos
+        </li> 
+    )}
+</ul>
+```
+
+### Keys
+
+Devemos criar chaves únicas para identificar cada elemento de uma lista.
+
+```jsx
+<ul>
+    {minhaLista.map( pessoa => 
+        <li key={pessoa.id}>
+          {pessoa .nome} - {pessoa .idade} anos
+        </li> 
+    )}
+</ul>
+```
+
+### Parâmetros de Funções
+
+Podemos usar o ".bind()" para passar parâmetros para as funções
+
+```jsx
+<ul>
+    {minhaLista.map( pessoa => 
+        <li 
+          onClick={this.sayMyName.bind(this, pessoa)} 
+          key={pessoa.id} 
+        >
+          {pessoa .nome} - {pessoa .idade} anos
+        </li> 
+    )}
+</ul>
+```
+
+### Fragmentos
+
+Podemos utilizar Fragmentos para retornar vários elementos de uma só vez sem precisar criar Arrays ou elementos adicionais que servirão de containers.
+
+```jsx
+return <React.Fragment>
+    <li key="0" >Karen</li>
+    <li key="1" >Maria</li>
+    <li key="2" >João</li>
+</React.Fragment>
+```
+
+Também podemos escrever da forma simplificada:
+
+```jsx
+return <>
+    <li key="0" >Karen</li>
+    <li key="1" >Maria</li>
+    <li key="2" >João</li>
+</>
+```
+
+# O que são Elementos Filhos?
+
+Até o momento nós só criamos componentes e os utilizamos na raiz da aplicação. Mas podemos ir além disso, pois o React permite que a gente trabalhe facilmente com elementos filhos.
+
+Elementos filhos são os elementos que vão dentro das tags de outro elemento.
+
+```jsx
+<MeuComponente>
+   <MeuTitulo />
+</MeuComponente>
+```
+
+Até mesmo se você escrever um texto, esse texto será considerado filho do elemento no qual escrevemos.
+
+```jsx
+<MeuComponente>
+   Texto
+</MeuComponente>
+```
+
+Isso é muito útil quando queremos, por exemplo, permitir que parte de um componente tenha uma estrutura customizada. Ao invés de passar a estrutura do JSX por propriedade, passamos como elementos filhos entre as tags, deixando a aparência do código mais legível e similar ao HTML.
+
 # A Saideira
 
 Essa série continua!
