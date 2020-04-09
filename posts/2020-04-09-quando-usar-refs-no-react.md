@@ -26,3 +26,7 @@ Por exemplo, ao invés de acessar o estado de um componente filho para alterar u
 O elemento `<dialog>` do HTML exibe uma modal. Se você acessá-lo, poderá exibi-lo executando o método "showModal()" e escondê-lo executando "close()".
 
 Porém, o `<dialog>` também pode ser controlado pelo atributo "open". Então é melhor criar uma variável no "state" para controlar o atributo "open" ao invés de criar um "ref" para executar "showModal()" e "close()".
+
+# A Saideira
+
+Esse post foi inspirado no conteúdo lá da [TreinaWeb](https://www.treinaweb.com.br/). Recomendo o material deles!
