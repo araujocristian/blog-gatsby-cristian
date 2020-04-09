@@ -5,6 +5,7 @@ description: >-
   momento para facilitar o acesso de elementos e componentes. Porém, isso é um
   erro grave.
 date: '2020-04-09 01:27:19'
+thumbnail: assets/img/quando-usar-refs-no-react.png
 category: react
 background: '#2DA0C3'
 ---
