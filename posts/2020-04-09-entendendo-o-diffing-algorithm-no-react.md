@@ -41,7 +41,7 @@ Então:
 
 No exemplo acima mantivemos o componente `<ListaProdutos />`, mas o elemento a sua volta (`<div>` e `<span>`) são diferentes. Isso faria com que o React apagasse totalmente nosso `<ListaProdutos />` e criasse um novo, mesmo que as propriedades e estados de `<ListaProdutos />` não tivessem sido alterados.
 
-### Elementos do mesmo tipo
+# Elementos do mesmo tipo
 
 Quando a comparação chega a um lugar onde os elementos são do mesmo tipo, o React analisa os seus atributos. Se os atributos diferem, apenas eles serão atualizados e o resto continua intocado.
 
@@ -58,13 +58,13 @@ No exemplo acima temos o mesmo elemento (`div`), então apenas o que é diferent
 
 Após fazer a diferenciação de um elemento, o React começa a verificar os elementos que estão dentro dele e o ciclo se reinicia, verificando se são elementos do mesmo tipo ou não.
 
-### Componentes do mesmo tipo
+# Componentes do mesmo tipo
 
 Quando um componente é atualizado a sua instância continua a mesma, então métodos como o "constructor()" e "componentDIdMount()" não serão executados novamente, já que são eventos disparados apenas na inicialização.
 
 Métodos de atualização, como o "componentWillReceiveProps()" e "componentWillUpdate()" são chamados. O "render()" é executado novamente para que seu conteúdo seja comparado ao estado anterior para poder ser atualizado também, e lá dentro todo esse ciclo também se reinicia.
 
-### Diferença entre elementos filhos e chaves
+# Diferença entre elementos filhos e chaves
 
 Por padrão React irá analisar os elementos filhos e, ao encontrar uma diferença, fará as alterações necessárias.
 
