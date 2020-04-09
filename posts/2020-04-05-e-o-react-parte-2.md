@@ -218,6 +218,114 @@ Até mesmo se você escrever um texto, esse texto será considerado filho do ele
 
 Isso é muito útil quando queremos, por exemplo, permitir que parte de um componente tenha uma estrutura customizada. Ao invés de passar a estrutura do JSX por propriedade, passamos como elementos filhos entre as tags, deixando a aparência do código mais legível e similar ao HTML.
 
+### Acessando Elementos Filhos
+
+Para acessar os elementos filhos de um componente acessamos "this.props.children".
+
+Ao acessar um elemento filho podemos pegar o seu tipo pelo "type" e utilizar isso como se fosse uma tag. Assim poderemos modificar e adicionar propriedades.
+
+```jsx
+{
+   this.props.children.map(element => <element.type {...element.props} ></element.type>)
+}
+```
+
+### Referências - Refs
+
+Referências servem para acessarmos elementos ou componentes. Criamos referências com "React.createRef()" e passamos na propriedade "ref" de um elemento ou componente.
+
+```jsx
+this.myRef = React.createRef();
+<div ref={this.myRef} ></div>
+```
+
+Utilize refs apenas quando indispensável.
+
+### Event Emitter
+
+Podemos permitir a comunicação entre componentes com Event Emitters.
+
+```jsx
+import Events from 'events'; // importa o "events" do Node.js
+const Channel = new Events.EventEmitter(); // instancia um emissor de eventos
+```
+
+Comece a ouvir eventos com "Channel.on(‘nomeDoEvento’, função)". Inicie os eventos no "componentDidMount()".
+
+Pare de ouvir os eventos com "Channel.removeListener(‘nomeDoEvento’, função)". Faça isso no "componentWillUnmount ()".
+
+### Capturando Erros dos Filhos
+
+Podemos capturar erros vindos dos componentes filhos com o método "componentDidCatch(error, info)"  e com a função estática: 
+
+```jsx
+    static getDerivedStateFromError(error) {
+        return {
+            hasError: true
+        }
+    }
+```
+
+Use `static getDerivedStateFromError()`para renderizar uma UI alternativa após o erro ter sido lançado. Use `componentDidCatch()`para registrar informações do erro.
+
+# Portais
+
+Portais (Portals) nos permitem renderizar um elemento no lugar que quisermos, mesmo que este local esteja fora da nossa árvore de elementos ou fora da nossa aplicação React.
+
+Um bom exemplo são os vídeos do Facebook. Quando estamos assistindo a um vídeo de um post e rolamos a página, um player flutuante com o nosso vídeo aparece, nos permitindo continuar assistindo o vídeo enquanto navegamos. O vídeo continua de onde parou.
+
+![](https://d2v0x26thbzlwf.cloudfront.net/prod/384/img/rId82iacnnjf.lpa.png)
+
+Poderíamos fazer isso com os Portais do React.
+
+Em qualquer situação em que você precise renderizar um componente em qualquer outro lugar, seja dentro ou fora da sua aplicação, criar um Portal é uma boa solução.
+
+### Criando Portais
+
+Execute "ReactDOM.createPortal(element, container)".
+
+O primeiro parâmetro é o componente a ser renderizado e o segundo é o elemento que receberá o componente.
+
+# Contexto (Context)
+
+Quando aprendemos a criar elementos filhos, vimos que podemos passar propriedades ao elementos para compartilhar dados. Porém, isso pode ser trabalhoso caso a gente precise compartilhar um certo grupo de dados entre vários componentes ao redor de toda a nossa aplicação.
+
+Contextos (context) nos permitem passar dados aos componentes sem precisar passá-los manualmente pelas propriedades de cada componente.
+
+### Usando Contextos
+
+Crie um contexto com "React.createContext()". Você pode passar como parâmetro um valor inicial padrão.
+
+```jsx
+const MyContext = React.createContext();
+```
+
+A raiz da árvore de componentes que utilizarão esse contexto devem estar dentro de <MyContext.Provider>, o qual recebe uma propriedade "value" com os valores que serão passados aos componentes.
+
+Os componentes que utilizarão o contexto devem receber este contexto em sua propriedade estática "contextType". Assim, em uma árvore com vários contextos, seu componente saberá de qual contexto pegar os dados.
+
+# React DevTools
+
+Ferramenta que nos permite analisar os componentes, suas propriedades e estados, facilitando debugar as aplicações feitas com React ou React Native.
+
+### Instalação da Extensão para Navegadores
+
+Você pode instalar a extensão para Chrome ou Firefox:
+
+<https://chrome.google.com/webstore/detail/react-developer-tools/fmkadmapgofadopljbjfkapdkoienihi?hl=en>
+
+<https://addons.mozilla.org/en-GB/firefox/addon/react-devtools/>
+
+### Instalação do pacote do NPM
+
+Você também pode usar a React DevTools diretamente do Node.js. Para instalar, basta executar o comando "$ npm install -g react-devtools"
+
+Execute no terminal o comando "$ react-devtools" e insira no <head> da sua aplicação a seguinte tag:
+
+```jsx
+<script src="http://localhost:8097"></script>
+```
+
 # A Saideira
 
 Essa série continua!
