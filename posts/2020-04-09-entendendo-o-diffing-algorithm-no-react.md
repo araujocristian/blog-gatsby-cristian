@@ -143,3 +143,7 @@ Por isso que utilizar o îndice do elemento no Array como chave é ruim, pois o 
 Veja que nesse exemplo estamos usando o índice dos elementos no Array. Eles acabaram ficando com a chave diferente. Maria antes tinha a chave 0 e agora está com a chave 1, fazendo o React reconhecer como um elemento diferente, o que o fará pensar que todos os elementos mudaram, tendo novamente que fazer três operações para atualizar os elementos.
 
 Outro erro comum é utilizar números aleatórios, como os gerados por "Math.random()", como chave. Lembre-se que isso irá atrapalhar o funcionamento do React e prejudicando a performance da aplicação.
+
+# A Saideira
+
+Esse post foi inspirado no conteúdo lá da [TreinaWeb](https://www.treinaweb.com.br/). Recomendo o material deles!
