@@ -359,7 +359,11 @@ Utilize como container o componente*<IntlProvider>*, que recebe as propriedades 
 ### Formatações com o React Intl
 
 ```jsx
-<FormattedNumber value={123456789.12} />
+<FormattedNumber 
+            value={123456789.12} 
+            minimumFractionDigits={2}
+            maximumFractionDigits={2} 
+/>
 <FormattedDate value={new Date()} />
 <FormattedTime value={new Date()} />
 <FormattedRelative value={new Date()} />
