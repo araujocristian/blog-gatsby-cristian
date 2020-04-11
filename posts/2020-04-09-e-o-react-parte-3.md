@@ -194,3 +194,55 @@ const Index = loadable(() => import('./views/index'));
 ```
 
 O Loadable Components não exige a presença do `<Suspense>`.
+
+# Por que Tipar dados?
+
+Tipar dados significa que estaremos indicando se um dado é uma string, número, etc.
+
+Tipar dados nos permite identificar certos problemas até mesmo antes de executarmos nosso código, nos ajudando a melhorar e acelerar nosso fluxo de trabalho.
+
+O JavaScript não oferece um tipo de tipagem estática, então precisamos de outras ferramentas para nos possibilitar isso.
+
+Hoje em dia, por causa do Angular, a forma mais comum de se trabalhar com tipagem no JavaScript é usando o TypeScript, mas também temos o Flow, uma ferramenta criada pelo Facebook e muito utilizada com React para fazer a verificação de tipagem.
+
+### Flow
+
+Ferramenta criada pelo Facebook, normalmente usada com React, para se trabalhar com tipagem no JavaScript.
+
+### Instalação do Flow
+
+* Execute:
+
+```shell
+$ npm install --save-dev flow-bin
+```
+
+* Inclua o comando "flow" : "flow" nos scripts do "package.json"
+* Crie o arquivo de configuração ".flowconfig" executando o comando:
+
+```shell
+$ npm run flow init
+```
+
+* Adicione a notação "// @flow" no início dos arquivos que quer que o Flow analise
+* Execute o Flow com o comando:
+
+```shell
+$ npm run flow
+```
+
+### Tipando Dados
+
+Declare um "type" e indique o tipo do dado após ":". Caso seja um objeto ou classe, utilize generics (*<>*).
+
+```jsx
+type Props = {
+  name?: string,
+  age: number,
+  isActive: boolean,
+  nameList: Array<string>
+}
+class App extends Component <Props>  {
+
+}
+```
