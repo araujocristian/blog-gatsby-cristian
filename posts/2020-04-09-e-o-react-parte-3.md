@@ -341,3 +341,45 @@ Chamamos a Internacionalização (internationalization) de i18n, pois são as pr
 Um exemplo é a famosa "en-US", que indica o inglês usado nos Estados Unidos.
 
 Outro que você provavelmente pode ter visto por aí é o "pt-BR", que indica o português do Brasil, diferente do "pt-PT", que indica o português de Portugal.
+
+### React Intl
+
+Biblioteca criada pelo Yahoo! para se trabalhar com internacionalização no React.
+
+Instale executando:
+
+```shell
+$ npm install --save react-intl
+```
+
+Importe uma língua de "*react-intl/locale-data/{tag language}*" e registre-a com a função "*addLocaleData()*".
+
+Utilize como container o componente*<IntlProvider>*, que recebe as propriedades "*locale*" e "*messages*".
+
+### Formatações com o React Intl
+
+```jsx
+<FormattedNumber value={123456789.12} />
+<FormattedDate value={new Date()} />
+<FormattedTime value={new Date()} />
+<FormattedRelative value={new Date()} />
+<FormattedMessage id="app.hi" description="hi message" defaultMessage="Hello web developers!" />
+<FormattedMessage
+            id='app.clicks'
+            description='quantidade de cliques'
+            defaultMessage='Olá, você tem {totalClicks, plural,
+                =0 {nenhum clique}
+                one {# clique}
+                other {# cliques}
+            }.'
+            values={this.state}
+        />
+<FormattedMessage values={this.state} id="app.select" description="selecao de palavras" defaultMessage="
+        {sexo, select,
+            masculino {Ele}
+            feminino {Ela}
+            other {Alguém}
+        } está vindo.
+        " />
+
+```
