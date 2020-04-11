@@ -315,3 +315,29 @@ it('ClickCounter deve ter o total de cliques igual a 2', () => {
     expect(meuComponente.state().totalClicks).toEqual(2);
 })
 ```
+
+# Internacionalização
+
+Em informática chamamos de "Internacionalização" quando desenvolvemos ou adaptamos um software para que ele se adapte a outras culturas, países, línguas, etc.
+
+Pense nas datas:
+
+* No Brasil usamos o formato "dia-mês-ano", como 31/12/2020;
+* Nos Estados Unidos usamos o formato "mês-dia-ano", como 12/31/2020;
+* No Japão usamos o formato "ano-mês-dia", como 2020/12/31.
+
+Quando falamos de números, no Brasil separamos as casas decimais com vírgula. A cada três algarismos costumamos colocar um ponto para facilitar a leitura, como: "1.000,25".
+
+Já nos Estados Unidos é ao contrário. Então o mesmo número ficaria como "1,000.25".
+
+Caso a nossa aplicação precise ser usada em outros países, alcançando um público maior, precisamos de um modo que facilite a adaptação de itens como os dos exemplos acima. Assim, teremos apenas uma adaptação das mensagens do sistema ao invés de ter que desenvolver uma outra aplicação para um determinado país.
+
+Chamamos a Internacionalização (internationalization) de i18n, pois são as primeiras e últimas letras da palavra com o número de letras entre elas.
+
+# Language Tags e Localização
+
+"Language Tags" é o nome que damos às marcações que usamos para identificar uma língua. Muitas também permitem que você especifique o país ou região que usa essa língua.
+
+Um exemplo é a famosa "en-US", que indica o inglês usado nos Estados Unidos.
+
+Outro que você provavelmente pode ter visto por aí é o "pt-BR", que indica o português do Brasil, diferente do "pt-PT", que indica o português de Portugal.
