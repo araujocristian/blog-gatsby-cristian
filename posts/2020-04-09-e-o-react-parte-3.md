@@ -6,6 +6,8 @@ thumbnail: assets/img/e-o-react.png
 category: react
 background: '#2DA0C3'
 ---
+
+
 A ultimas partes desse tutorial podem ser encontradas aqui:
 
 * [E o React? Parte 1](https://araujocristian.codes/e-o-react/) 
@@ -245,4 +247,48 @@ type Props = {
 class App extends Component <Props>  {
 
 }
+```
+
+# Testes Automatizados
+
+Automatização de testes de software são basicamente funções que escrevemos que tem como objetivo executar funcionalidades do nosso código e verificar se ocorre um resultado esperado. Do contrário, provavelmente alguma função não foi bem escrita e pode gerar algum erro no nosso software.
+
+Automatizamos os testes porque um código executando testes é bem mais rápido do que uma pessoa testando.
+
+O maior motivo é que quando alteramos qualquer detalhe em nosso código, o sistema todo deve ser testado novamente para garantir que tudo está bem. Raramente teremos um código que só é usado em um lugar. Normalmente ele é usado em uma função que é usada por outra função que é responsável por algum dado que outra função precisa, etc.
+
+Para uma pessoa executar todos os testes do sistema a cada alteração levaria muito tempo, e cada código criado precisa de novos testes, então a pilha de testes só tende a aumentar conforme o software aumenta.
+
+Para testar aplicações feitas com React normalmente usamos o Jest e Enzyme.
+
+Jest é uma ferramenta de testes criada pelo Facebook, utilizada para testar seus códigos JavaScript incluindo aplicações feitas com React.
+
+O Jest é rápido e utiliza workers para maximizar a performance, executando vários testes paralelamente. 
+
+O Enzyme é uma ferramenta criada pela Airbnb para facilitar os testes de componentes criados com React.
+
+Sua API é intuitiva e flexível, se inspirando na API de manipulação de DOM do jQuery.
+
+### Jest
+
+Ferramenta criada pelo Facebook para testar código JavaScript.
+
+### Enzyme
+
+Ferramenta criada pela Airbnb para testar componentes criados com React.
+
+### Preparando o Enzyme
+
+Instale as dependências com:
+
+```shell
+$ npm i enzyme enzyme-adapter-react-(numero da versão do react) react-test-renderer
+```
+
+Crie um arquivo de configuração para o Enzyme chamado "**src/setupTests.js**".
+
+```jsx
+import { configure } from 'enzyme';
+import Adapter from 'enzyme-adapter-react-16';
+configure({ adapter: new Adapter() });
 ```
