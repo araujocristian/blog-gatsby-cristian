@@ -440,3 +440,65 @@ class App extends Component {
 export default App;
 
 ```
+
+# Renderização no Servidor
+
+Quando as aplicações web começaram a ser feitas, era comum a produção do HTML no servidor. Isso porque o JavaScript ainda era complicado e com poucas funcionalidades. E para piorar, as funcionalidades que o JavaScript tinha não funcionavam exatamente da mesma maneira em todos os navegadores.
+
+Então, era muito melhor produzir o HTML no servidor e enviá-lo ao cliente. Caso o cliente fizesse alguma ação, esta ação era enviada ao servidor e o servidor enviava uma tela nova para o cliente.
+
+Mas isso também não é muito prático, e é bem desconfortável ter a tela inteira sendo atualizada e baixada a cada pequena ação.
+
+Então surgiu o AJAX, onde fazemos requisições assíncronas com JavaScript e atualizamos apenas uma pequena parte da aplicação.
+
+Com a evolução do JavaScript foram surgindo bibliotecas e frameworks para desenvolvermos aplicações inteiras no lado do cliente. Isso revolucionou o desenvolvimento web.
+
+Porém, nem tudo são flores com essas aplicações feitas inteiramente com JavaScript. Pense nos motores de busca como Google ou redes sociais como Facebook. Eles possuem códigos que entram em nossas páginas e fazem uma leitura do HTML.
+
+As aplicações modernas geram o HTML pelo JavaScript assim que chegam no cliente, então certos serviços que não executam JavaScript enxergam nossas aplicações assim:
+
+![](https://d2v0x26thbzlwf.cloudfront.net/prod/387/img/rId9on4xmuzh.qxa.png)
+
+Isso mesmo! Um HTML vazio. Essa é a aparência de uma aplicação React. Caso a gente precise que serviços como motores de busca ou redes sociais enxerguem o conteúdo de nossas aplicações, precisamos que o servidor já envie o HTML pronto. Isso ajuda o SEO e, como o HTML já estará pronto, o usuário não precisa que a aplicação seja carregada e iniciada para enxergar os primeiros elementos na tela, passando a impressão de que a página carregou mais rapidamente.
+
+Mas não queremos voltar a fazer nossas aplicações inteiramente no servidor. Então a solução seria poder iniciar a criação do HTML que seria feito pelo nosso framework/biblioteca no cliente já no servidor. Ao carregar tudo no navegador, a aplicação continua com o seu comportamento comum. Essa é a ideia do que chamamos de Aplicações Universais!
+
+Então, entre as vantagens temos:
+
+* Performance - a aplicação já virá com o HTML preparado, fazendo parecer que ela iniciou mais rapidamente;
+* SEO - os motores de busca poderão ler o conteúdo do HTML ao invés de ver um arquivo vazio;
+* Crawlers de Redes Sociais - redes sociais poderão ler as meta tags com informações das nossas páginas.
+
+Resumindo: aprenderemos a renderizar nossa aplicação React no servidor. Assim que a aplicação terminar de carregar, ela se torna uma aplicação React comum como conhecemos, com as views sendo geradas no próprio cliente.
+
+### Aplicação Universal
+
+Aplicação que tem seu código gerado tanto no cliente quanto no servidor.
+
+### Electrode
+
+Ferramenta para criar aplicações universais com React desenvolvida pelo Walmart.
+
+Instale com o comando:
+
+```shell
+$ npm install -g electrode-ignite xclap-cli
+```
+
+E gere uma nova aplicação com:
+
+```shell
+$ ignite generate-app
+```
+
+Inicie um servidor com:
+
+```shell
+$ clap dev
+```
+
+E faça build com:
+
+```shell
+$ clap build
+```
