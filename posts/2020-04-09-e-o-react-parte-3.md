@@ -6,9 +6,7 @@ thumbnail: assets/img/e-o-react.png
 category: react
 background: '#2DA0C3'
 ---
-
-
-A ultimas partes desse tutorial podem ser encontradas aqui:
+As ultimas partes desse tutorial podem ser encontradas aqui:
 
 * [E o React? Parte 1](https://araujocristian.codes/e-o-react/) 
 * [E o React? Parte 2](https://araujocristian.codes/e-o-react-parte-2/)
@@ -108,7 +106,7 @@ $ npm install --save react-router-dom
 
 ### Usando o React Router
 
-Use o componente `<BrowserRouter> `como contêiner da aplicação.
+Use o componente `<BrowserRouter>`como contêiner da aplicação.
 
 Use o componente `<Link to="caminho"/>`para redirecionar o usuário ao clicar.
 
@@ -385,7 +383,6 @@ Utilize como container o componente *`<IntlProvider>`* , que recebe as proprieda
             other {Alguém}
         } está vindo.
         " />
-
 ```
 
 Exemplo: 
@@ -438,7 +435,6 @@ class App extends Component {
 }
 
 export default App;
-
 ```
 
 # Renderização no Servidor
