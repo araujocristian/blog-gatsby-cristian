@@ -36,3 +36,68 @@ A própria equipe responsável pelo React encoraja que todos comecem a usar os H
 Hooks apenas podem ser criados dentro de componentes criados com funções, eles não funcionam em componentes criados por classes. Mas isso não significa que você deve reescrever seus componentes. A ideia é que os seus novos componentes sejam criados por funções, e que os já existentes criados com classes continuem assim, pois não há intenções de remover as classes do React. Porém, a intenção é que cada vez mais pessoas utilizem Hooks como a principal forma de criar componentes no React.
 
 Pense então no seguinte: use componentes para reutilizar interface, hooks para reutilizar lógica.
+
+# useState
+
+Vamos conhecer o Hook mais básico do React, o useState, que vai nos permitir trabalhar com estados em componentes funcionais.
+
+Teremos uma explicação de como utilizá-los e depois veremos como o React lida com esses estados.
+
+### Como usar?
+
+```jsx
+const [nome, setNome] = useState(valorInicial);
+```
+
+# useEfect
+
+Agora nós vamos conhecer outro Hook básico do React, o useEffect. Ele nos permite executar efeitos colaterais (side effects) nos componentes funcionais, nos permitindo ter grande controle do que acontece na nossa aplicação.
+
+Primeiro vamos ver o que são esses efeitos, como utilizar esse Hook, conhecer o Array de dependências, aprender a trabalhar com Event Listeners e os cuidados que precisamos tomar para evitar problemas com esse Hook.
+
+### O que são efeitos?
+
+O useEffect nos permite trabalhar com efeitos colaterais em nossa aplicação.
+
+Um efeito colateral seria a consequência, algo que ocorre porque outra coisa aconteceu. Eles são muito úteis, pois se encaixam perfeitamente na natureza reativa do React: executar algo em resposta a outra coisa.
+
+Então podemos usar esse Hook para executar um código quando o componente é criado (como o "componentDidMount"), a cada nova renderização ou reagir à alteração de uma ou mais variáveis.
+
+Vamos entender melhor a seguir.
+
+### Como usar?
+
+Quando queremos executar uma função a cada renderização:
+
+```jsx
+useEffect(() => {
+});
+```
+
+Quando queremos executar uma função apenas quando o componente for criado:
+
+```jsx
+useEffect(() => {
+}, []);
+```
+
+Quando queremos executar uma função a cada alteração de determinadas variáveis:
+
+```jsx
+useEffect(() => {
+}, [var1, var2 . . . ]);
+
+```
+
+Também podemos colocar uma função como retorno para ser executada quando o componente for removido/atualizado.
+
+```jsx
+useEffect(() => {
+            return () => {
+            }
+}, [var1, var2 . . .]);
+```
+
+# useRef
+
+Vamos conhecer o useRef, um Hook bem interessante que nos permite acessar elementos do DOM e também salvar alguns valores que podem ser úteis no fluxo dos nossos códigos.
