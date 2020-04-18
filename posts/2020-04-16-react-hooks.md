@@ -101,3 +101,19 @@ useEffect(() => {
 # useRef
 
 Vamos conhecer o useRef, um Hook bem interessante que nos permite acessar elementos do DOM e também salvar alguns valores que podem ser úteis no fluxo dos nossos códigos.
+
+### Como usar?
+
+Passe a referência à propriedade "ref" do elemento ao qual quer ter acesso. O elemento estará dentro da propriedade "current":
+
+```jsx
+const elemento = useRef();
+<div ref={elemento}></div>
+```
+
+Também podemos salvar qualquer coisa na propriedade current.
+
+```jsx
+const elemento = useRef();
+element.current = 5;
+```
