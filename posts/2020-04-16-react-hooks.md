@@ -117,3 +117,17 @@ Também podemos salvar qualquer coisa na propriedade current.
 const elemento = useRef();
 element.current = 5;
 ```
+
+# useContext
+
+Um problema comum nas aplicações é o compartilhamento de dados entre os vários componentes. Para facilitar isso temos os contextos, que aprendemos a criar no curso de criação de componentes.
+
+Agora nós vamos conhecer um Hook criado para facilitar a criação de contextos.
+
+### Breve Revisão sobre Contextos
+
+Contextos foram criados para se compartilhar dados entre nossos componentes do React. Isso evita o trabalho de ficar passando dados pelas propriedades dos componentes. Caso você tenha uma árvore muito grande de elementos, será trabalhoso ficar passando esses dados, e qualquer alteração no meio do caminho pode quebrar a sua aplicação.
+
+Pense então nesses dados dentro dos contextos como dados globais, que podem ser acessados de qualquer lugar da aplicação, nos poupando de ficar passando cada propriedade para cada nível em nossa árvore manualmente.
+
+Isso facilita muito o nosso trabalho quando precisamos que algum dado precise se dissipar por vários componentes e/ou níveis da nossa árvore de componentes. Um exemplo muito comum é quando criamos uma aplicação que pode ter o seu tema alterado. Imagine o trabalho para fazer todos os elementos do sistema ficarem sabendo se o usuário escolheu um tema claro ou escuro para que os componentes atualizem seu estilo. Outros exemplos clássicos que podemos citar também são os dados do usuário logado ou o idioma selecionado.
