@@ -86,7 +86,6 @@ Quando queremos executar uma função a cada alteração de determinadas variáv
 ```jsx
 useEffect(() => {
 }, [var1, var2 . . . ]);
-
 ```
 
 Também podemos colocar uma função como retorno para ser executada quando o componente for removido/atualizado.
@@ -100,7 +99,7 @@ useEffect(() => {
 
 # useRef
 
-Vamos conhecer o useRef, um Hook bem interessante que nos permite acessar elementos do DOM e também salvar alguns valores que podem ser úteis no fluxo dos nossos códigos.
+Vamos conhecer o useRef, um[[[  Hook bem interessante que nos permite acessar elementos do DOM e também salvar alguns valores que podem ser úteis no fluxo dos nossos códigos.
 
 ### Como usar?
 
