@@ -24,7 +24,7 @@
     "gatsby-remark-relative-images-v2": "^0.1.5",
     "gatsby-source-filesystem": "^2.1.21",
     "gatsby-source-graphql": "2.1.21",
-    "gatsby-transformer-remark": "^2.6.21",
+    "gatsby-transformer-remark": "^5.25.1",
     "gatsby-transformer-sharp": "^2.2.13",
     "gsap": "^3.2.6",
     "lazysizes": "^5.2.0",
